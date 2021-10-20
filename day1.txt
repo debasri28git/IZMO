@@ -1,0 +1,90 @@
+ddl->data defination language create, alter,drop,truncate,rename
+dml->date manipulation language->insert ,update,delete
+tcl->transaction control language->commit,rollback ,savepoint
+dcl-> data control lan->grant,revoke
+dql->data query lan->select
+
+clause
+
+select
+from
+where
+group by
+having
+order by will take positional notation
+/////////////////////////////////////////////
+/*comment in mysql ide*/
+use izmo;/* for selecting the database 
+select * from employees; fetching all data from all columns from the specific table
+describe departments; gives the information for specific table
+desc employees;*/
+/*select last_name,salary from employees;/* only projection of last_name and salary of all datas/fetching specific columns*/
+/*select last_name,salary from employees where last_name='King';
+select last_name,salary from employees where salary >= 15000;
+select last_name,salary from employees where last_name='King' and (salary >15000 and salary != 17000);
+*/
+/* logical operator and or not
+relational operator > < >= <= = !=
+matching string pattern-> like '_'/ "%"
+matching two bounderies-> between-and
+matching dataset -> in
+not matchong -> not in
+checking null value-> is null/ is not null
+  
+ select last_name,first_name,hire_date  from employees where hire_date like '%-12-%' 
+ select  last_name,salary from employees where salary in(8000,10000,12000);
+select  last_name,salary from employees where salary not in(8000,10000,12000);
+select  last_name,salary from employees where last_name in('King','Nayer')
+select  last_name,salary,commission_pct from employees where commission_pct is not null;
+select  last_name,salary,commission_pct from employees where commission_pct is null;
+
+selelect  last_name,salary,commission_pct from employees where salary between 12000 and 15000 order by last_name desc;
+select  last_name,salary,commission_pct from employees  order by salary,last_name;
+select  last_name,salary,commission_pct from employees  order by salary,last_name desc; 
+select  salary,commission_pct,last_name from employees  order by 2 desc,1 desc;
+select salary,first_name,salary *12 as "Anual salary" ,12*(salary+commission_pct) as net_income from employees where salary between 10000 and 24000 and commission_pct is not null;
+desc employees;
+SELECT concat(last_name,CONCAT(' ',first_name)) as "Full Name" from EMPLOYEES;
+
+select  salary from employees  order by 1 desc;
+display last_name and salary of those employee earning salary as 10000 to 12000 ,without using relational operator excluding both the data (10000,12000)
+select employee_id,manager_id,first_name,last_name from employees where manager_id is null;
+select job_id from employees;
+select last_name,job_id from employees 
+where job_id in('AD_VP','hr_rep','IT_PROG');
+select * from test;
+select name where name in('King') ;
+select last_name,salary, 12* salary  as annual_sal from employees order by 3 desc;
+select last_name,salary, 12* salary  as annual_sal from employees order by annual_sal desc;*/
+//////////////////////////////
+max(),min(),avg(),sum(),count()
+//////////////////////////////
+select last_name,department_id from employees;
+select distinct department_id from employees;
+/*select department_id,max(salary) from employees
+group by department_id;
+select department_id,min(salary) from employees
+group by department_id;
+select department_id,avg(salary) from employees
+group by department_id;
+select count(salary) from employees;
+select count(last_name) from employees;
+select count(name) from test;
+select sum(salary) from employees;
+select department_id,sum(salary) from employees
+group by department_id;
+select max(salary) as"maximum salary",min(salary) as "minimum salary",avg(salary) as "average salary" from employees
+where job_id='it_prog';
+select max(hire_date),min(hire_date) from employees;
+select sum(hire_date),avg(hire_date) from employees;
+select department_id, max(salary) from employees
+where job_id<>'HR_REP'
+group by department_id
+having max(salary)>10000
+order by 2 desc;
+select department_id,count(*)
+from employees
+group by department_id
+having count(*)>5;*/
+
+
