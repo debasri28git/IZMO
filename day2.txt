@@ -13,4 +13,44 @@ end as "comment" from employees;
 -- select commission_pct,ifnull(commission_pct,0) as "value" from employees; 
 -- select salary,commission_pct,salary+ifnull(commission_pct,0) as "monthly income" from employees;
 -- select commission_pct,ifnull(commission_pct,'wrong') from employees;
-
+-- select if(condition,true,false)
+--  select if(12>15,'yes','no') as test;
+-- select if(17>15,'yes','no') as test;
+-- select salary,if(salary>10000 and salary < 17000,'Good','Bad') as "comment" from employees;
+/* select salary , case
+when salary>17000 then "very good"
+when salary>10000 then "good"
+when salary >5000 then "ok"
+else "bad"
+end as "comment" from employees;
+*/
+-- select ifnull(10/0,'wrong') as test;
+-- select commission_pct,ifnull(commission_pct,0) as "value" from employees; 
+-- select salary,commission_pct,salary+ifnull(commission_pct,0) as "monthly income" from employees;
+-- select commission_pct,ifnull(commission_pct,'wrong') from employees;
+-- select extract(day from '1220-09-23') as test;
+-- select extract(month from '2020-09-12') as test;
+-- select extract(year from '2020-09-12') as test;
+-- select extract(year from hire_date) from employees;
+-- select round(54.87,-2) as test;
+-- SELECT DATEDIFF('2010-10-30','2010-11-15')as test;
+-- SELECT DATEDIFF('2010-11-15','2010-10-31')as test;
+-- select timediff('2010-10-31 23:12:12','2010-10-30 15:10:10')as test;
+-- select hire_date from employees where department_id=20;
+-- select (month('2010-12-12') -month('2010-10-12') ) as test;
+-- select (extract(month from'2010-12-12') - extract( month from '2010-10-12') ) as test;
+-- select * from employees;
+-- select employee_id,last_name,salary from employees where salary<(select salary from employees where last_name='Gee');
+-- select job_id from employees
+ -- select hire_date,job_id,last_name from employees where hire_date =(select hire_date from employees where job_id='ac_account' );
+-- select job_id from employees where department_id=90;
+-- select hire_date from employees where job_id in('ad_pres','ad_vp')
+-- select hire_date from employees where job_id = any(select job_id from employees where department_id=90);
+-- select x, from employees where sal> all(a,2000,b,300,5000,)
+ -- select salary from employees where last_name='Cambrault';
+-- select last_name,salary from employees;
+-- select last_name,salary from employees where salary> (select salary from employees where last_name='Austin');
+-- select first_name,last_name from employees order by last_name;
+--  select last_name,salary from employees where salary>any(select salary from employees where last_name='Cambrault');
+-- select last_name,salary from employees where salary>all(select salary from employees where last_name='Cambrault');
+ -- select last_name,salary from employees where salary>any(select salary from employees where last_name='king');
