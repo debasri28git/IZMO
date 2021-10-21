@@ -1,0 +1,16 @@
+-- select if(condition,true,false)
+--  select if(12>15,'yes','no') as test;
+-- select if(17>15,'yes','no') as test;
+-- select salary,if(salary>10000 and salary < 17000,'Good','Bad') as "comment" from employees;
+/* select salary , case
+when salary>17000 then "very good"
+when salary>10000 then "good"
+when salary >5000 then "ok"
+else "bad"
+end as "comment" from employees;
+*/
+-- select ifnull(10/0,'wrong') as test;
+-- select commission_pct,ifnull(commission_pct,0) as "value" from employees; 
+-- select salary,commission_pct,salary+ifnull(commission_pct,0) as "monthly income" from employees;
+-- select commission_pct,ifnull(commission_pct,'wrong') from employees;
+
