@@ -1,0 +1,49 @@
+find those employee who are earning less than their department's avg sal
+fing those employee whose  boss are not working in same department
+fing those employee who hired in the same date as their boss's  
+
+select salary ,last_name from employees e 
+where salary > 
+(select salary from employees d
+where e.department_id=d.department_id
+)
+
+select last_name from employees e where hire_date=(select hire_date from employees d where e.manager_id=d.employee_id);
+ 
+ -- find those emp getting minium salary of their department's avg(sal)
+ 
+ -- select last_name,salary from employees e where salary > (select avg(salary) from employees d where e.department_id=d.department_id);
+ -- select department_id,avg(salary) from employees group by department_id;
+ 
+ select last_name from employees e where department_id not in(select department_id from employees f
+ where e.employee_id=f.manager_id);
+ 
+ select last_name from employees e where hire_date in (select hire_date from employees f
+ where e.manager_id=f.employee_id);
+ 
+ select hire_date from employees where last_name='Gietz';
+ select manager_id from employees where last_name='Gietz';
+ select hire_date from employees where employee_id=205;
+ 
+ select min(salary) from (select distinct salary from employees order by 1 desc limit 3)x;
+
+select e.last_name,e.salary,e.department_id,d.department_name from employees e right join departments d using(department_id);
+select e.last_name,e.salary,e.department_id,d.department_name from departments d right join employees e  using(department_id);
+desc departments;
+desc locations;
+select e.last_name,d.department_name,e.department_id
+from employees e inner join departments d 
+where e.department_id=d.department_id;
+
+
+desc job_history;
+desc jobs;
+select e.salary ,e.last_name, j.job_title from
+employees e inner join jobs j
+on e.salary between j.min_salary and j.max_salary; 
+select e.last_name,d.department_name,e.department_id
+from employees e inner join departments d; 
+
+select e.last_name,d.department_name from employees e ,departments d
+where e.department_id=d.department_id;
+
