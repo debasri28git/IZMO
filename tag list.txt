@@ -1,0 +1,148 @@
+what is the tag? a set of rules imposed over the user text
+tag we write inside the <> like <p>--its called paragraph
+paragraph characteristics will come over the data inside <p></p> tags
+
+attribute --- comes inside the tag giving extra features for that tag it is a key value pair like thing for example height=90 for those tags who are having block characteristics we can apply this attribue to them.
+
+some tags are having some mandate attribute like <img src="" height=90></img>
+
+
+
+
+<!doctype >-- telling the browser what version of html we are using
+<!doctype html>-- for html version 5
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">-- version 4
+
+<!doctype html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> version 1
+<html></html>--main tag that contains all the html tags
+within html we have two section we are having in the document
+1) header section
+to provide extra info related to that document it is not for user to view the content except title tag we cnt see anything written inside head tag
+tag name is <head></head>
+related tags are->
+
+<title>name of the page</title>-> to give title for the document
+<link ></link-> at attach external css file
+<link ></link-> at attach favicon file
+attribute to link
+mandate href
+others rel,type
+<style>->to declare css in the header section
+<script>->to define javascript 
+for pr
+2) body section
+inthe document if we want to provide heading for that we have 6 heading tags
+each 
+<h1><h2><h3><h4><h5><h6>
+for giving heading to the page
+there is no mandate attributes
+when we use heading by default it will occupy total width of page and come with new line
+optional attrinutes are class,id
+
+<p> for writing a paragraph  it provides space before starting
+
+creating different type of listing we use ol,ul,dl tags
+<ol> tags for ordered list comes with number/alphabet/roman letters that we can provide in type attribute
+each element we have to write in <li> tag examples---
+type values can be A,a,I,i,1
+<ol type="I">
+<li>bike</li>
+<li>car</li>
+<li>bus</li>
+</ol>
+
+the same example if we want in bullet fashion we use <ul>tag
+type values can be disc,circle,square
+
+<ul type="circle">
+<li>bike</li>
+<li>car</li>
+<li>bus</li>
+</ul>
+
+<dl>-defination list/data defination
+<dt></dt>data term--->menu
+<dd>item</dd>
+</dl
+
+
+
+
+
+
+
+
+
+for inserting a picture in the page the tag is <img> 
+its having mandate attrribute as src--defines the source ofthe picture
+other attributes are 
+title--provide info in tooltip
+height--set height of the pic
+width-- set width of the pic
+alt--is pic is not displayed then provide info about the pic
+if we want a pic with caption we can use <figure></figure> tag
+and <figcaption>caption</figcaption>
+example
+
+<figure>
+<img src="" />
+<figcaption>this is a pic</figcaption>
+</figure>
+
+to provide data in tabular manner we have
+<table>
+should have the following tags
+mandate are <tr>->table row
+<td>->table data
+<caption>for table name</caption>
+<th>->table heading
+<thead>->header group
+<tbody>->middle portion
+<tfoot>->summery
+table tag currently mandate attribute is border
+others height width 
+
+for merging cells rowwise or columnwise we have attribute rowspan colspan that we can apply in <th> and <td>
+for grouping multiple column we use colgroup tag with <col> tag inside it that has mandate attribute span
+<colgroup>
+<col span="2"></col>
+
+</colgroup>
+
+
+filling up the user data
+<form>->to post the data to the server
+</form>
+
+mandate attribute is action="serverpagename"
+other attributes are
+method=get/post
+<input>->to take user value
+
+type=text,password,radio,checkbox,number,email,file,button,submit,reset
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
