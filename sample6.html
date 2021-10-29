@@ -1,0 +1,30 @@
+<form>
+<textarea name="feedback" rows="10" cols="5" maxlength="8" minlength="3">
+</textarea>
+<br>
+enter phone number(xxx-xxx-xxxx) inthis format
+<input type="text" pattern="[A-Za-z]{2,8}#+$" name="ni">
+<br>
+<input type="submit" value="check"/>
+<br><br>
+
+<label for="city">enter city name</label>
+<input type="text" list="city" name="city" id="city"/>
+<datalist id="city">
+<option value="chennai">
+<option value="bangalore">
+<option value="delhi">
+<option value="mumbai">
+</datalist>
+<br><br>
+<label for="b">Choose your browser from the list:</label>
+<input list="browsers" name="brow" id="b">
+
+<datalist id="browsers">
+  <option value="Edge"/>
+  <option value="Firefox"/>
+  <option value="Chrome"/>
+  <option value="Opera"/>
+  <option value="Safari"/>
+</datalist>
+</form>
