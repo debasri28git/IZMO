@@ -1,0 +1,33 @@
+selector
+
+global selector [*]
+
+element selector [tagname]
+class selector  [.x]
+id selector [#x]
+  combinator selector
+          decendant selector [element1 element2]
+          child selector [el1>el2]
+          adjacent sibling selector [el1+el2]
+	  all sibling selector  [el1~el2]
+  attribute selector   el[attribute=value]
+ pseudo class selector  el:class
+ pseudo element selector tagname::element  
+
+
+pseudo class for a selector
+if we have visited a hyperlink property is :visited
+if we are currently working on a link property is :active
+if mouse pointer is over a link property is :hover
+if a link is never visited by user property is :link
+
+pseudo element for p tag
+p::first-line
+p::first-letter
+::marker
+ 
+
+
+
+
+
