@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+*{
+
+    background-color:beige;
+}
+
+p{
+    background-color: aquamarine;
+}
+
+h3~strong{
+    color:blueviolet;
+}
+
+h3+strong{
+    color:brown;
+}
+
+h2.pp{background-color: burlywood;}
+div>p{background-color: cadetblue;}
+div p{color:cornsilk;}
+
+</style>
+</head>
+<body>
+    
+    
+    <h3>class selector</h3>
+    <strong>syntax .classvalue{}</strong><br>
+    <strong>sample strong tags </strong><br>
+    <strong>sample strong tags </strong><br>
+    <strong>sample strong tags </strong><br>
+    
+    
+    <h3>Combinator selector</h3>
+    <ul>
+        <li><a href="#d1">descendant selector</a></li>
+        <li><a href="#">child selector</a></li>
+        <li><a href="#">adjacant sibling selector</a></li>
+        <li><a href="#">all sibling selector</a></li>
+    </ul>
+<p class="pp">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.<br>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.<br>
+  <strong> Hello</strong>  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.<br>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.<br>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.<br>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.<br>
+   Lorem  ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.<br>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.<br>
+</p>
+
+<h2 class="pp"> hello css</h2>
+
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.<br>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.<br>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.<br>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.<br>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.<br>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.<br>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.<br>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.<br>
+</p>
+   <h2 id="d1">Descendant Selector</h2>
+    <strong>syntax el el{}</strong>
+    <h2> child selector</h2>
+    <strong>syntax el>el{}</strong>
+    <h2> adjacent sibling selector</h2>
+    <strong>syntax el+el{}</strong>
+    <h2>all sibling selector</h2>
+    <strong>syntax el~el{}</strong>
+
+<p>The descendant selector matches all elements that are descendants of a specified element.</p>
+
+<div>
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+  <section><p>Paragraph 3 in the div.</p></section>
+</div>
+
+<p>Paragraph 4. Not in a div.</p>
+<p>Paragraph 5. Not in a div.</p>
+
+</body>
+</html>
