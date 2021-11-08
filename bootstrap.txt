@@ -1,0 +1,21 @@
+css framework bootstrap--nothing but a collection of predefined classes
+bootstrap cdn---link to the library file
+class:
+
+jumbotron
+text-center
+container
+
+text--> text-primary,text-success,text-info,text-muted,text-danger,text-warning,text-left,text-center,text-right,text-justify,text-nowrap,text-lowercase,text-uppercase,text-capitalize
+
+backgroud-->bg-primary/success/info/warning/danger
+
+list-->list-unstyled,list-inline,dl-horizontal
+list-group,list-group-item[-success/-info/-warning/-danger]
+list-group-item-heading,list-group-item-text
+
+label-->badge,label-default/success/info/primary/warning/danger
+
+btn btn-group btn-group-lg/sm/xs
+btn btn-primary/success/info/warning/danger
+table table-bordered table-hover table-striped
