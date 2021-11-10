@@ -1,0 +1,7 @@
+webpage
+structural part->html
+styling->css/bootstrap
+
+logical part->javascript->scripting language .html
+
+client side to validate the page

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function funClick()
+    {
+alert("function invoked by onclick");
+    }   
+    
+    function funFocus()
+    {
+//alert("function invoked by focus");
+  
+document.getElementById("p").innerHTML+=" gaining the focus";
+}   
+    function funBlur()
+    {
+alert("function invoked by onblur");
+    }   
+    function funLoad()
+    {
+alert("function invoked by onLoad");
+    }   
+
+
+    function funOver()
+    {
+        document.getElementById("p1").innerHTML="MOUSE OVER";
+    }   
+    function funOut()
+    {
+        document.getElementById("p1").innerHTML="MOUSE OUT";
+    }   
+
+    function funUp()
+    {
+        document.getElementById("p2").innerHTML="keyup";
+    }   
+    function funPress()
+    {
+        document.getElementById("p3").innerHTML="keypress";
+    }   
+    function funDown()
+    {
+        document.getElementById("p4").innerHTML="key down";
+    }   
+    </script>
+    <style>
+        .d{height: 200px;
+            width: 200px;
+        background-color: aqua;}
+    </style>
+</head>
+<body onload="funLoad()">
+ <h1>hello javascript</h1>
+ <button onclick="funClick()">click</button><br>
+<input type="text" onfocus="funFocus()" placeholder="focus"/><br>
+<input type="text" onblur="funBlur()" placeholder="blur"/>
+<p id="p">para1</p>
+<div class="d" onmouseover="funOver()" onmouseout="funOut()">
+<p id="p1"></p>
+</div><br>
+<input type="text" onkeyup="funUp()"/><br>
+<p id="p2"></p>
+<input type="text" onkeypress="funPress()"/><br>
+<p id="p3"></p>
+<input type="text" onkeydown="funDown()"/><br>
+<p id="p4"></p>
+
+</body>
+</html>

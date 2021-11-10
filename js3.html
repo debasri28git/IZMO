@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+//variable var
+/*var x=12;//number
+ x="js"//string
+ x=true//boolean
+ x=new Date();
+ 
+*/
+function change()
+        {
+var a=document.getElementById("d1");
+a.style.height="200px";
+a.style.width="200px";
+a.style.backgroundColor="red";
+        }
+function add()
+        {
+var a=document.getElementById("i1").value;
+
+a=parseInt(a);
+var b=document.getElementById("i2").value;
+b=parseInt(b)
+ if(isNaN(a)||isNaN(b))
+alert("please provide valid number")
+else
+document.getElementById("p1").innerHTML="output:the added result of "+a+" and "+b+" is: "+(a+b);
+
+        }
+    </script>
+<style>
+#d1{
+
+height: 100px;
+width: 100px;
+background-color: aquamarine;
+}
+</style>
+</head>
+<body>
+ <h1>hello javascript</h1>
+<input type="number" placeholder="enter a value" id="i1" value="23"/><br>
+<input type="number" placeholder="enter a value" id="i2" value="12"/><br>
+<button onclick="add()">click</button><br>
+
+
+<p id="p1">output:</p>
+<br>
+
+<div id="d1">hello</div>
+<button onclick="change()">change</button><br>
+</body>
+</html>
