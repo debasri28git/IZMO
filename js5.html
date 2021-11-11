@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function fun()
+        {
+
+var a=window.prompt("enter a string value");
+document.getElementById("p1").innerHTML=a;
+var l=a.length;
+//alert(l);
+document.getElementById("p1").innerHTML+=" <br> "+l;
+var c=a.charAt(2);
+document.getElementById("p1").innerHTML+=" <br> "+c;
+
+var d=a.indexOf('o');
+document.getElementById("p1").innerHTML+=" <br> "+d;
+
+var s=a.substring(2);
+document.getElementById("p1").innerHTML+=" <br> "+s;
+
+var s1=a.substring(2,4);
+document.getElementById("p1").innerHTML+=" <br> "+s1;
+
+}
+    </script>
+</head>
+<body>
+ <h1>hello javascript</h1>
+<button onclick="fun()">call</button><br>
+<p id="p1"></p>
+</body>
+</html>

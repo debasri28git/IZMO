@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function fun()
+        {
+           var x2=[2,"one","two",8,9,0,"hi"];
+            for(var i=0;i<x2.length;i++)
+             {
+                 if(x2[i]>=0 && x2[i]<=10)
+                 continue
+                 else
+                document.getElementById("p1").innerHTML+=x2[i]+"<br>"; 
+             }
+
+             var s= new Date();
+             document.getElementById("p1").innerHTML+=s+"<br>" 
+       }
+       
+       function fun1()
+       {
+
+var t=6;
+switch(t)
+{
+case 1: 
+document.getElementById("p1").innerHTML="1"
+break;
+case 3: 
+document.getElementById("p1").innerHTML="3"
+break;
+case 5: 
+document.getElementById("p1").innerHTML="5"
+break;
+case 6: 
+document.getElementById("p1").innerHTML="6"
+break;
+default: 
+document.getElementById("p1").innerHTML="no value"
+}
+}
+function fun2()
+       {
+
+var t="sixwe";
+switch(t)
+{
+case "one": 
+document.getElementById("p1").innerHTML="1"
+break;
+case "three": 
+document.getElementById("p1").innerHTML="3"
+break;
+case "five": 
+document.getElementById("p1").innerHTML="5"
+break;
+case "six": 
+document.getElementById("p1").innerHTML="6"
+break;
+default: 
+document.getElementById("p1").innerHTML="no value"
+
+}
+
+       }
+
+
+    </script>
+</head>
+<body>
+ <h1>hello javascript</h1>
+<button onclick="fun()">call</button><br>
+<button onclick="fun1()">switch</button><br>
+<button onclick="fun2()">switch</button><br>
+<p id="p1"></p>
+</body>
+</html>
