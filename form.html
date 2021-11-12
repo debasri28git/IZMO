@@ -1,69 +1,88 @@
+<!DOCTYPE html>
 <html>
 <head>
+<script>
+    function checkRadio()
+{var f1=0;
+   var t= document.getElementsByName("game")
+   for(var i=0;i<t.length;i++)
+   if(t[i].checked==true)
+   {f1=1;break;}
+    if(f1==0)
+    alert("pleae select any game")
+}
+function checkBox()
+{var f1=0;
+   var t= document.getElementsByName("fruit")
+   for(var i=0;i<t.length;i++)
+     if(t[i].checked==true)
+     {f1=1;break;}
+    if(f1==0)
+    alert("pleae select any fruit")
+}
+
+function check()
+{
+var sl=document.getElementById("sl");
+//alert(sl.options[sl.options.selectedIndex].value)
+//alert(sl.options[sl.options.selectedIndex].text)
+if(sl.options[sl.options.selectedIndex].value=="o")
+alert("please select from drop down box")
+}
+
+
+    function validate()
+    {var f1=0;
+for(var i=0;i<document.forms["form1"].elements.length;i++)
+//alert(document.forms["form1"].elements[i].name);
+{
+if(document.forms["form1"].elements[i].name=="userid"&&document.forms["form1"].elements[i].value=="")
+alert("please enter userid");
+if(document.forms["form1"].elements[i].name=="pswd"&&document.forms["form1"].elements[i].value=="")
+alert("please enter password");
+ if(document.forms["form1"].elements[i].name=="pswd"&&document.forms["form1"].elements[i].value.length<8)
+alert("password should be 8 character")
+}
+check();
+checkRadio()
+checkBox();
+}
+
+    
+    
+</script>
 </head>
 <body>
-
-<form method="post" action="serverpageName">
-<!--<textarea rows="5" cols="20">enter your address</textarea>
-
-    registration no:<input type="text" name="name" value="1233554" /><br/>
-Enter name:<input type="text" name="name"  maxlength="12"/><br/>
-Enter password<input type="password" name="pswd" required /><br/>
-Confirm  password<input type="password" name="pswd"/><br/>
-Enter email<input type="email" name="email"/><br/>
-select one option<br/>
-B.Tech<input type="radio" name="degree" checked/><br/>
-M.Tech<input type="radio" name="degree"/><br/>
-BCA<input type="radio" name="degree"/><br/>
-MCA<input type="radio" name="degree"/><br/>
-
-select one option<br/>
-B.Tech<input type="checkbox" name="degree1" checked/><br/>
-M.Tech<input type="checkbox" name="degree2"/><br/>
-BCA<input type="checkbox" name="degree3"/><br/>
-MCA<input type="checkbox" name="degree4"/><br/>
-
-select from the drop down 
-<select name="sl">
-<option value="btech">B.Tech</option>
-<option value="mtech">M.Tech</option>
-<option value="bca">BCA</option>
-<option value="mca">MCA</option>
+<form method="post" action="server" name="form1">
+enter user id:<input type="text" name="userid"><br>
+enter password: <input type="password" name="pswd"><br>
+enter your choice:<br>
+cricket<input type="radio" name="game" value="cricket">
+Tennis<input type="radio" name="game" value="tennis">
+Football<input type="radio" name="game" value="Football">
+<br><br>
+enter your choice:<br>
+apple<input type="checkbox" name="fruit" value="apple"><br>
+Bannana<input type="checkbox" name="fruit" value="bannana"><br>
+Strawbery<input type="checkbox" name="fruit" value="strawbery"><br>
+<select name="select" id="sl">
+    <option value="o">select any one</option>
+<option value="jan">January</option>
+<option value="feb">February</option>
+<option value="mar">March</option>
+<option value="apr">April</option>
+<input type="button" value="click" onclick="validate()"/>
+<input type="submit" value="submit">
+<input type="reset"  value="reset"/>
 </select>
-
-<br/>
-<select>
-<optgroup label="Graduation">
-<option>B.Tech</option>
-<option>BCA</option>
-</optgroup><optgroup label=" PostGraduation">
-<option>M.Tech</option>
-<option>MCA</option></optgroup>
-</select>
-</br>
-<select size="2" multiple>
-<optgroup label="Graduation">
-<option>B.Tech</option>
-<option>BCA</option>
-</optgroup><optgroup label=" PostGraduation">
-<option>M.Tech</option>
-<option>MCA</option></optgroup>
-</select>
-<br/><br/>
-<input type="number" min="20" max="200"/><br/>
-<input type="range" /><br/>
-<input type="color"/><br/>
-<input type="date"/><br/>
-<input type="file" />
-<input type="tel"/><br/><br/>
-<input type="button" value="button"/><br/>
-
-<input type="submit" value="submit button"/><br/>
-
-<input type="reset" value="reset button"/><br/>
-<input type="image" src="image/pic1.jpg" height="50" width="50"/>-->
 </form>
 
-</body>
-</html>
 
+
+
+</form>
+
+
+</body>
+
+</html>
