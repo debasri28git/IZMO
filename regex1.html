@@ -1,0 +1,59 @@
+
+<html>
+<head>
+    <script>
+/*
+^ beginning of string
+$ end of a string
+. any character
+[] means range-> [A-z]->capital range; [0-9]->digit; [a-z]-> lower alphabet range
+[A-za-z0-9]->alphanumeric
+[^0-9]->not a digit
+(abc) -> group 
+(xc|xz) | -> either or
+x* -> zero to n number repitation of x
+x+ -> atleast one x is required
+x?  -> zero to one time repitation
+{m} ->exact same number repitation
+{m,n}-> from m to n number repitation
+{m,}->atleast m number to any number repitation
+//metacharacter
+\w word
+\W not a word
+\d digit
+\D not a digit
+*/
+
+// creating reggular expression pattern we have 2 ways
+//1 var pattern=//  // we can build a pattern
+// 2 var pattern = new RegExp("") //we can build up a pattern
+//test method takes the string and checkes if string  qualifyies or not
+
+/*function fun()
+{
+ var pat=/^Q$/  // called pattern /symbols/
+var r=document.getElementById("i").value;
+alert(pat.test(r));
+}
+*/
+function fun()
+{
+ //var pat=new RegExp("^(aab|bbc|cca)+$")  // called pattern /symbols/
+ //var pat=new RegExp("^[0-9]+$")
+ var pat=new RegExp("^(\\D){3,}$")
+ var r=document.getElementById("i").value;
+alert(pat.test(r));
+}
+
+
+    </script>
+
+
+</head>
+<body>
+<h1>regular expression by RegExp</h1>
+  
+<input type="text" id="i">  <br>      
+<input type="button" onclick="fun()" value="check">
+</body>
+</html>
