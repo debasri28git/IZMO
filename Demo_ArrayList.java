@@ -14,9 +14,15 @@ public class Demo_ArrayList {
 		l2.add(12);l2.add(56);l2.add(78);l2.add(17);l2.add(92);l2.add(22);
 		System.out.println(l2.size());
 		System.out.println(l2);
+		Collections.sort(l2);
+		System.out.println(l2);
+		Collections.reverse(l2);
+		System.out.println(l2);
+		
 		l.add(100);
 		l.add("java");
 		l.add(23.34);
+		/*
 		//String n=(String)l.get(0);
 		//System.out.println(n);
 		System.out.println(l);
@@ -64,7 +70,7 @@ while(ii.hasNext())
 	
 	//Vector v=new Vector(5);
 	
-	//System.out.println(v.capacity());
+	//System.out.println(v.capacity());*/
 	}
 
 	

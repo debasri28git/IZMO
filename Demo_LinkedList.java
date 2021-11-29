@@ -20,6 +20,9 @@ name1.add("kavya");
 name1.add("nayana");
 name1.add("vishes");
 name1.add("vyshnavi");
+name1.add(null);
+System.out.println(name1);
+/*
 name.addAll(name1);
 System.out.println(name.contains("nayana"));
 System.out.println(name.getFirst());
@@ -39,10 +42,13 @@ System.out.println(name.removeLastOccurrence("nayana"));
 name.addLast("vikaas");
 System.out.println(name);
 name.addFirst("ram");
-
-
-
-
+System.out.println(name);
+Collections.sort(name);
+System.out.println(name);
+int c=65;
+char a='A';
+System.out.println(a==c);
+*/
 	}
 
 }
