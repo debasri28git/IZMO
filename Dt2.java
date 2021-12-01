@@ -20,6 +20,7 @@ public class Dt2 {
 		Scanner sc=new Scanner(System.in);
 		String dt1=sc.nextLine();
 		SimpleDateFormat smt1=new SimpleDateFormat("dd-MM-yy");
+		smt1.setLenient(false);
 		Date d1=smt1.parse(dt1);
 		System.out.println(d1);
 		
