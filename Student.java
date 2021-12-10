@@ -1,25 +1,50 @@
-package file;
+package com.dm.model;
 
-import java.io.Serializable;
+import java.util.Arrays;
 
-public class Student implements Serializable{
-
-	int roll;
-	String name;
-	transient int age;
-	double marks;
-	public Student(int roll, String name, int age, double marks) {
-		super();
-		this.roll = roll;
-		this.name = name;
-		this.age = age;
-		this.marks = marks;
-	}
-	@Override
+public class Student {
+    @Override
 	public String toString() {
-		return "Student [roll=" + roll + ", name=" + name + ", age=" + age + ", marks=" + marks + "]";
+		return "Student [id=" + id + ", name=" + name + ", address=" + address + ", mode=" + mode + ", subjects="
+				+ Arrays.toString(subjects) + "]";
 	}
-
-
+	private int id;
+	private String name;
+	private String address;
+	private String mode;
+	private String subjects[];
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getMode() {
+		return mode;
+	}
+	public void setMode(String mode) {
+		this.mode = mode;
+	}
+	public String getSubjects() {
+		String s="";
+		for(String x:subjects)
+			s+=x+" ";
+		return s;
+	}
+	public void setSubjects(String[] subjects) {
+		this.subjects = subjects;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	
-}
+	 }
